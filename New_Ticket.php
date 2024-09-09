@@ -53,27 +53,27 @@
             <div class="title">Please fill complete the form to submit a requisition</div>
             <div class="form-group">
                 <div class="half-width">
-                    <label for="issue">Maintenance Issue</label>
-                    <input type="text" id="issue" placeholder="Describe the issue">
+                    <label for="title">Maintenance Issue</label>
+                    <input type="text" id="title" placeholder="Enter a title for the issue, e.g. Broken window">
                 </div>
                 <div class="half-width">
                     <label for="category">Problem Category</label>
-                    <select>
-                        <option id="category" value="general">General Maintenance</option>
-                        <option id="category" value="plumbing">Plumbing</option>
-                        <option id="category" value="electrical">Electrical</option>
-                        <option id="category" value="carpentry">Carpentry</option>
+                    <select name="caategory">
+                        <option value="general">General Maintenance</option>
+                        <option value="plumbing">Plumbing</option>
+                        <option value="electrical">Electrical</option>
+                        <option value="carpentry">Carpentry</option>
                     </select>
                 </div>
             </div>
             <div class="full-width">
                 <label for="description">Please give a short description of the problem</label>
-                <textarea id="description" name="description" placeholder="Enter Description here" ></textarea>
+                <textarea id="description" name="description" placeholder="Enter a description of the issue here" ></textarea>
             </div>
             <div class="button-container">
                 <div class="upload-section">
                     <label for="upload" class="upload-label">Upload a picture of the problem</label>
-                    <input id="upload" type="file" accept=".jpg, .jpeg, .png">
+                    <input id="upload" name="upload" type="file" accept=".jpg, .jpeg, .png">
                 </div>
                 <button name="submit" id="submit" type="submit">Submit</button>
             </div>
