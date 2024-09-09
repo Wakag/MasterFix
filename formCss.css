@@ -1,0 +1,83 @@
+.form-container * {
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+}
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.form-container .form-content {
+    padding: 20px;
+    width: 976px;
+    background: #fff;
+    border-radius: 8px;
+    position: relative;
+}
+.form-container .title {
+    text-align: center;
+    font-size: 20px;
+    color: #1E1E1E;
+    margin-bottom: 50px;
+}
+.form-container .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 20px; /* Adjust gap between elements */
+}
+.form-container .form-group.full-width {
+    flex-direction: column; /* Ensure label is above textarea */
+}
+.form-container .form-group label, .form-container .upload-label {
+    display: block;
+    color: #1E1E1E;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.form-container input[type="text"], .form-container input[type="file"], .form-container select, .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 12px;
+
+}
+.form-container .half-width {
+    width: 25%; /* Set the width to 25% */
+}
+.form-container button {
+    width: 17%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #65558F;
+    color: white;
+    text-align: center;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.form-container button:hover {
+    background-color: #CE93D8;
+}
+.form-container .upload-section {
+    width: 25%;
+}
+.form-container .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+#description{
+    height: 4.5em; /* Adjust based on font size and line height */
+    overflow-y: auto; /* Adds scroll if content exceeds height */
+    
+}
+.form-container textarea {
+    resize: none; /* Prevents resizing */
+}

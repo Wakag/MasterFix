@@ -1,0 +1,24 @@
+in one of the pages i have a table that is retrieved from the database via php and displayed. above the table i have table manipulation controls; "filter by" and "sort" which have the following html:
+<!--table manipulation controls-->
+    <div class="table-controls">
+      <p id="filter" class="filter" >Filter by</p>
+      <p id="sort" class="sort" >Sort</p>
+    </div>
+    <!-- Filter Pop-up -->
+    <div class="dropdown">
+      <div id="dropdown-menu" class="dropdown-content">
+        <a href="#" class="dropdown-item">My Tickets</a>
+        <a href="#"class="dropdown-item">General Maintenance</a>
+        <a href="#"class="dropdown-item">Electrical</a>
+        <a href="#"class="dropdown-item">Plumbing</a>
+        <a href="#"class="dropdown-item">Carpentry</a>
+      </div>
+    </div>
+    <!-- Sort Pop-up -->
+    <div class="dropdown">
+      <div id="dropdown-menu" class="dropdown-content">
+          <a href="#"class="dropdown-item">Sort by Name</a>
+          <a href="#"class="dropdown-item">Sort by Date</a>
+          <a href="#"class="dropdown-item">Sort by Priority</a>
+      </div>
+the two controls each should bring out a dropdown menu, which i have also created the html for, can you help me out with the javascript and the css, to make it also match the dropdown menu you made for the options button

@@ -1,0 +1,136 @@
+/* Center the .table container along the x-axis */
+.content {
+    display: flex;
+    justify-content: center; /* Center the .table container horizontally */
+    height: max-content;
+    margin-top: -5px;
+}
+
+.table {
+    width: 100%; /* Make the table span the full width of the card container */
+}
+
+/* Styling the table */
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    margin-top: 0px;
+    font-size: 16px;
+    text-align: left;
+    background-color: #F3E5F5; /* Light purple background for the table */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header styling */
+.table th {
+    background-color: #6A1B9A; /* Deep purple header background */
+    color: #FFFFFF; /* White text */
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+/* Table row styling */
+.table tr {
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #CE93D8; /* Light purple border */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.table tr:hover {
+    background-color: #E1BEE7; /* Slightly darker purple on hover */
+}
+
+/* Table data cell styling */
+.table td {
+    padding: 12px;
+    color: #212529; /* Dark grey text */
+    font-weight: 400;
+}
+
+/* Row styling when clicked */
+.table tr:active {
+    background-color: #D1C4E9; /* Darker purple when clicked */
+}
+
+/* Center aligning text in specific columns, like Credit Limit */
+.table td:last-child {
+    text-align: center;
+}
+
+.table-controls {
+    margin-top: 0px; /* Add space between the table and the controls */
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: flex-start; /* Align items to the start of the container */
+    gap: 40px; /* Add spacing between the items */
+    
+    color: #333;
+}
+.table-controls .filter,
+.table-controls .sort {
+    padding-left: 10px; /* Add padding to the left */
+}
+/* Container for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown p {
+    background-color: rgb(197, 197, 197); /* Deep purple background to match design */
+    color: #FFFFFF;            /* White text for contrast */
+    padding: 8px 16px;
+    border-radius: 15px;        /* Rounded corners */
+    margin-right: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    display: inline-block;
+    position: relative;
+    text-align: center;
+  }
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1;
+    left: 0; /* Align dropdown to the left edge of the parent */
+    top: 35px; /* Position it closer to the parent element */
+    transform: translateX(-20px); /* Fine-tune the horizontal positioning */
+}
+/* Dropdown items */
+.dropdown-item {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+/* Last item should not have a border */
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #6A1B9A;
+}
+
+/* Show the dropdown menu on click */
+.show {
+    display: block;
+}
+
+
+
+

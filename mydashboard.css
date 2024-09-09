@@ -1,0 +1,97 @@
+/* Buttons styling */
+.segmented-buttons {
+    width: fit-content; /* Adjusts the width of the container to fit its children */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 240px;            
+    display: flex;
+    border-radius: 16px; /* Rounded corners for the container */
+    overflow: hidden; /* Ensures the child buttons do not overflow the rounded corners */
+}
+.segment-btn {
+    width: 120px; /* Set the width of the button */
+    height: 35px; /* Set the height of the button */
+    display: flex; /* Make the button a flex container */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    text-align: center; /* Center the text */
+    flex: none; /* Each button takes equal width */
+    background-color: #E8DEF8; /*#F3E5F5 Background color */
+    color: #1D1B20; /* Text color */
+    font-weight: 700;
+    white-space: nowrap; /* Prevent text wrapping */
+    border: 0.1px solid #79747E; /* Add border to each button */
+    padding: 8px 16px; /* Padding */
+    cursor: pointer; /* Cursor changes to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+.segment-btn.left {
+    border-radius: 16px 0 0 16px; /* Rounded corners on the left button */
+}
+.segment-btn.right {
+    border-radius: 0 16px 16px 0; /* Rounded corners on the right button */  
+}
+.segment-btn:hover, .segment-btn.active {
+    background-color:#4a396b; /* Background color for hover/active state */
+    color: #FFFFFF; /* Text color for hover/active state */
+}
+/* Tickets list styling */
+
+.tickets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0; /* No gap since separators will handle spacing */
+  width: 100%; /* Make the tickets-list take the full width of the content container */
+  margin: 0 auto; /* Center the tickets-list if it has a fixed width */
+  }
+.ticket-separator {
+  height: 1px;
+  background-color: #E0E0E0; /* Light gray color for the separator */
+  margin:2px 0; /* Add space around the separator */
+}
+.ticket-item {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+.ticket-item:hover {
+  background-color: #f1f1f1; /* Change background color on hover */
+}
+.ticket-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  margin-right: 16px;
+}
+.ticket-info{
+  padding-left: 20px;
+}
+.ticket-info h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #212529;
+}
+.ticket-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #6C757D;
+}
+.ticket-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+.ticket-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.ticket-actions img {
+  width: 20px;
+  height: 20px;
+}
