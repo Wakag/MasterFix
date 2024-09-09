@@ -1,0 +1,292 @@
+body {
+  background: whitesmoke;
+}
+.header-panel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0rem 5%;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    z-index: 100;
+    transition: 1s;
+    display: inline-flex;
+    
+  }
+.header-panel ul li{
+    display: inline-flex;
+    margin: 0.3em 1em;
+  }
+.roboto-bold {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    
+    }
+
+
+.right-bar {
+    display: flex;
+    justify-content: flex-end; /* Aligns the navigation to the right */
+    align-items: center;
+    flex-grow: 0.8; /* Takes up the remaining space to push the navigation to the far right */
+}
+.section-header {
+  transition: .5s ease;
+  padding: 2rem 10% ;
+  border-radius: 10rem;
+  font-size: 2rem;
+  padding: 3rem 7% 2rem;
+
+  text-align:initial;
+  color: black;
+  position: absolute;
+  
+  z-index: 10;
+}
+.home {
+  display: flex;
+  align-items: center;
+}
+.home-content h3 {
+  padding: 8rem 5%;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: .3;
+}
+  .navigation a {
+    text-decoration: none; /* Removes underline from links */
+    padding: 0.5rem 1rem; /* Adds padding around the links and button */
+    font-size: 1rem;
+    color: #f8d4fd;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-regular {
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+.banner {
+         /* Make the banner position relative for absolute positioning of text */
+        background-image: url('images/Rhodes-University-1024x576.jpg'); /* Replace 'your-image-path.jpg' with the actual path to your image */
+        width: 100%;
+        height: 100vh;
+        padding: 0rem 7% 0rem;
+        background-size: cover; /* Ensures the image covers the section */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        display: flex;
+        object-fit: cover;
+
+        
+        
+}
+.banner-text {
+  transition: .5s ease;
+  padding: 2rem 10% ;
+  border-radius: 10rem;
+  font-size: 0rem;
+  text-align: center;
+  color: floralwhite;
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  
+}
+
+.text{
+    
+    padding: 7em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+section {
+  min-height: 100vh;
+  
+}
+p {
+  
+  padding: 2rem 7% 2rem;
+  color: dimgrey;
+  text-align:initial;
+  
+}
+/* CSS */
+.custom-button {
+  background-color: #FEF7FF; /* Primary blue color */
+  color: black; /* White text */
+  padding: 10px 20px; /* Padding inside the button */
+  border: none; /* Remove default border */
+  border-radius: 5em; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.custom-button:hover {
+  background-color: #f8d4fd; /* Darker blue on hover */
+}
+
+.custom-button:active {
+  background-color: #a29bfe; /* Even darker blue when clicked */
+}
+
+.custom-button:focus {
+  outline: none; /* Remove the default outline */
+  box-shadow: 0 0 0 3px rgba(226, 209, 253, 0.5); /* Add a focus shadow */
+}
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f9ccff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #616060;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+
+
+
+/*************** Footer Section CSS **************/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0rem 7% 0rem;
+  background: black;
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+footer p {
+  font-size: 1rem;
+  color: whitesmoke; 
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+
+
+
+/* Login Forms styles */
+/* Style for the popup form */
+.form-popup {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9; /* Sit on top */
+}
+
+/* Add some style to the form container */
+.form-container {
+  display: none;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
