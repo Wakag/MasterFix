@@ -29,37 +29,37 @@
         $title = $_POST['title'];
         $category = $_POST['category'];
         $description = $_POST['description'];
-        
+    
         $studentId = "22M6578"; // Assuming student ID is fetched from session or elsewhere
         $residenceId = 1; // Assuming residence ID is known
         $status = 'submitted'; // Default status for a new ticket
-
+    
         // Handle file upload
         if (!empty($_FILES['upload']['name'])) {
             $targetDir = "uploads/";
             $fileName = basename($_FILES["upload"]["name"]);
             $targetFilePath = $targetDir . $fileName;
             $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
-
+    
             // Allow only specific file formats
             $allowedTypes = array('jpg', 'png', 'jpeg');
             if (in_array($fileType, $allowedTypes)) {
                 // Move file to the server
                 if (move_uploaded_file($_FILES["upload"]["tmp_name"], $targetFilePath)) {
                     // Insert ticket into the 'ticket' table
-                    $stmt = $mysqli->prepare("INSERT INTO ticket (TicketID, Status, CreationDate, TicketStudentID, TicketCategory, Description, TicketResID,Title) 
-                                              VALUES (UUID(), ?, NOW(), ?, ?, ?, ?,?)");
+                    $stmt = $mysqli->prepare("INSERT INTO ticket (TicketID, Status, CreationDate, TicketStudentID, TicketCategory, Description, TicketResID, Title) 
+                                              VALUES (UUID(), ?, NOW(), ?, ?, ?, ?, ?)");
                     $stmt->bind_param("sssssi", $status, $studentId, $category, $description, $residenceId, $title);
                     $stmt->execute();
-
+    
                     // Get the last inserted ticket ID
                     $ticketId = $mysqli->insert_id;
-
+    
                     // Insert picture into 'picture' table
                     $stmt = $mysqli->prepare("INSERT INTO picture (PictureID, Path, TicketID) VALUES (UUID(), ?, ?)");
                     $stmt->bind_param("si", $targetFilePath, $ticketId);
                     $stmt->execute();
-
+    
                     $message = "Ticket submitted successfully!";
                 } else {
                     $message = "Sorry, there was an error uploading your file.";
@@ -69,16 +69,15 @@
             }
         } else {
             // If no file uploaded, still insert the ticket without a picture
-            $stmt = $mysqli->prepare("INSERT INTO ticket (TicketID, Status, CreationDate, TicketStudentID, TicketCategory, Description, TicketResID,Title) 
-                                      VALUES (UUID(), ?, NOW(), ?, ?, ?, ?,?)");
+            $stmt = $mysqli->prepare("INSERT INTO ticket (TicketID, Status, CreationDate, TicketStudentID, TicketCategory, Description, TicketResID, Title) 
+                                      VALUES (UUID(), ?, NOW(), ?, ?, ?, ?, ?)");
             $stmt->bind_param("sssssi", $status, $studentId, $category, $description, $residenceId, $title);
             $stmt->execute();
-
+    
             $message = "Ticket submitted successfully without a picture!";
         }
     }
-    ?>  
-
+    ?>
     <!--Header-->
     <div class="panel">
     <header class="top-bar">
