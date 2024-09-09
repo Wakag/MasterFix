@@ -49,7 +49,10 @@
                     // Insert ticket into the 'ticket' table
                     $stmt = $mysqli->prepare("INSERT INTO ticket (TicketID, Status, CreationDate, TicketStudentID, TicketCategory, Description, TicketResID, Title) 
                                               VALUES (UUID(), ?, NOW(), ?, ?, ?, ?, ?)");
-                    $stmt->bind_param("sssssi", $status, $studentId, $category, $description, $residenceId, $title);
+                    if (!$stmt) {
+                        die("SQL error: " . $mysqli->error);
+                    }
+                    $stmt->bind_param("ssssss", $status, $studentId, $category, $description, $residenceId, $title);
                     $stmt->execute();
     
                     // Get the last inserted ticket ID
@@ -71,7 +74,10 @@
             // If no file uploaded, still insert the ticket without a picture
             $stmt = $mysqli->prepare("INSERT INTO ticket (TicketID, Status, CreationDate, TicketStudentID, TicketCategory, Description, TicketResID, Title) 
                                       VALUES (UUID(), ?, NOW(), ?, ?, ?, ?, ?)");
-            $stmt->bind_param("sssssi", $status, $studentId, $category, $description, $residenceId, $title);
+            if (!$stmt) {
+                die("SQL error: " . $mysqli->error);
+            }
+            $stmt->bind_param("ssssss", $status, $studentId, $category, $description, $residenceId, $title);
             $stmt->execute();
     
             $message = "Ticket submitted successfully without a picture!";
