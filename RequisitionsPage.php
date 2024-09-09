@@ -67,10 +67,7 @@
       <div class="table">
         <?php
           require_once("config.php");
-          $conn = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
-          if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error );
-          }
+          
           
           $sql = "SELECT 
                     t.TicketID, 
