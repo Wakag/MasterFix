@@ -66,7 +66,7 @@
     <div class="content">
       <div class="table">
         <?php
-          require_once("config.php");
+          require("config.php");
           
           
           $sql = "SELECT 
