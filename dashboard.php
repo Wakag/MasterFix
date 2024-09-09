@@ -7,34 +7,53 @@
 <!--Scripts-->
     <script src="mainScript.js"></script>
 <!--Stylesheets-->
+
     <link rel="stylesheet" href="superPage.css">
     <link rel="stylesheet" href="EditButtonModal.css">
     <link rel="stylesheet" href="MyDashboard.css">
 
 <!--Font and Icons-->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 </head>
 
 <body>
 <!--Header-->
 <div class="panel">
-    <header class="top-bar">
-        <div class="left-section">
-            <img src="" alt="Open" class="icon " title="Open Sidebar" />
-            <p class="page-title">The Masters Maintenance</p>
+<header>
+        <div class="header-panel">
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a class="roboto-bold" href="#">Dashboard</a>
+                <a class="roboto-bold" href="#">My Tickets</a>
+                
+              </div>
+              
+              <div id="main">
+                <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>  
+              
+              </div>
+
+        <h1 class="roboto-bold">MasterFix</h1>
+
+        <div class="right-bar">
+            <ul class="navigation">
+                <li><li><a href="#">User-Type</a></li></li>
+                <li><a href="login/create.php"><i class="fa-solid fa-user" style="font-size: 20px;"></i></a></li>
+                <li>
+                    <div>
+                        <i class="fa-solid fa-ellipsis-vertical" style="font-size: 20px;"></i>
+                        <div class="dropdown-content">
+                            <a href="#">Option 1</a>
+                            <a href="#">Option 2</a>
+                            <a href="#">Option 3</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        
-        <div class="account-section">
-            <span>User-Type</span>
-            <img src="" alt="user"  class="icon" title="User">
-            <div class="dropdown">
-                <img src="" id="trigger-popup" class="icon" alt="options" title="Options" onclick="toggleDropdown()">
-                <div id="options" class="dropdown-content">
-                    <a href="#" class="dropdown-item">Help</a>
-                    <a href="#" class="dropdown-item">Logout</a>
-                </div>
-            </div>
+        </div>   
     </header>
     <!--Background image section, just under top bar-->
     <section class="Under-Top-Bar-section">
@@ -63,8 +82,8 @@
                     <p>Maintenance issue resolved on 23 June 2024</p>
                 </div>
                 <div class="ticket-actions">
-                    <button class="edit-btn"><img src="edit_icon.png" alt="Edit"></button>
-                    <button class="delete-btn"><img src="delete_icon.png" alt="Delete"></button>
+                    <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
+                    <button class="delete-btn"><i class="fa-solid fa-trash"></i></button>
                     <!--<button class="edit-btn" data-ticket-id="?php echo $ticket['id']; ?>"><img src="edit_icon.png" alt="Edit"></button>-->
                     <!--<button class="delete-btn" data-ticket-id="?php echo $ticket['id']; ?>"><img src="delete_icon.png" alt="Delete"></button>-->
                 </div>
