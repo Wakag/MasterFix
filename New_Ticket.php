@@ -83,7 +83,12 @@
             $message = "Ticket submitted successfully without a picture!";
         }
     }
+    if (!empty($message)) {
+        echo "<script>alert('$message');</script>";
+    }
     ?>
+    
+    
     <!--Header-->
     <div class="panel">
     <header class="top-bar">
