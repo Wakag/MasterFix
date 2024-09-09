@@ -50,7 +50,7 @@
     <div class="content">
     <form action="" method="POST" class="form-container" enctype="multipart/form-data">
         <div class="form-content">
-            <div class="title">Please fill complete the form to submit a maintenance ticket</div>
+            <div class="title">Please fill complete the form to submit a requisition</div>
             <div class="form-group">
                 <div class="half-width">
                     <label for="issue">Maintenance Issue</label>
